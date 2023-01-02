@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     RespondToBoost();
   }
 
+  // CALLBACK METHODS
   void RotatePlayer()
   {
     if (Input.GetKey(KeyCode.LeftArrow))
@@ -37,11 +38,11 @@ public class PlayerController : MonoBehaviour
   {
     // IF PLAYER PRESSES UP ARROW, SPEED UP
     // OTHERWISE STAY SAME SPEED
-    if(Input.GetKey(KeyCode.UpArrow))
+    if (Input.GetKey(KeyCode.UpArrow))
     {
       surfaceEffector2D.speed = boostSpeed;
     }
-    else 
+    else
     {
       surfaceEffector2D.speed = baseSpeed;
     }
