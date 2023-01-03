@@ -13,7 +13,7 @@ public class CrashDetector : MonoBehaviour
   {
     if(other.tag == "Ground" && !hasCrashed)
     {
-      hasCrashed = true;
+      hasCrashed = true; // SET TO TRUE ON CRASH. PREVENT CRASH AUDIO FROM PLAYING TWICE, AKA ON PLAYER BOUNCE
       FindObjectOfType<PlayerController>().DisableControls(); // DISABLE CONTROLS VIA METHOD IN PLAYERCONTROLLER.CS
       crashEffect.Play();
       GetComponent<AudioSource>().PlayOneShot(crashSFX);
